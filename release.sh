@@ -3,7 +3,6 @@
 set -ex
 
 ORG=${ORG:-kubeovn}  # GitHub organization
-REPO="repository/"    # Folder in which we keep the charts
 
 usage() {
     >&2 echo "Usage: $0 <project> <version>"
@@ -31,10 +30,9 @@ main() {
 
     # Generate the chart's TGZ, move it to the repository folder
     helm package --version ${VERSION} ${PROJECT}/${CHART_DIR}
-    mv ${PROJECT}-${VERSION}.tgz ${REPO}
 
     # Update the repository endex 
-    helm repo index ${REPO}
+    helm repo index .
 }
 
 main "$@"

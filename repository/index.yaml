@@ -1,0 +1,15 @@
+apiVersion: v1
+entries:
+  kube-ovn:
+  - apiVersion: v2
+    appVersion: 1.14.0
+    created: "2025-06-28T23:51:50.253279791+02:00"
+    description: Helm chart for Kube-OVN
+    digest: 48842e6c10229370f58f8a8443bb4fdf85d500f1a1b356119eaadaba159f2bff
+    kubeVersion: '>= 1.29.0-0'
+    name: kube-ovn
+    type: application
+    urls:
+    - kube-ovn-v1.14.0.tgz
+    version: v1.14.0
+generated: "2025-06-28T23:51:50.250582139+02:00"
